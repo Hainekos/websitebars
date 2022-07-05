@@ -66,37 +66,23 @@ const IndexPage = ({data}) => {
           <div
             class="uk-child-width-1-2@s uk-child-width-1-4@m uk-grid-row-large uk-margin-large-top"
             data-uk-grid
-            uk-height-match="target: > a > .uk-card > .uk-card-body > div"
-          >
+            data-uk-height-match="target: > a > .uk-card">
             {data.allStrapiProduct.edges.map(({ node }) => (
               <Link to={"/product/" + node.slug} class="uk-link-reset">
                 <div class="uk-card uk-card-default uk-border-rounded uk-box-shadow-small uk-text-center">
-                  <div class="uk-card-media-top">
-                    <div
-                      class="uk-inline-clip uk-transition-toggle"
-                      tabindex="0"
-                    >
-                      <GatsbyImage
-                        image={
-                          node.media[0].localFile.childImageSharp
-                            .gatsbyImageData
-                        }
-                        alt="/"
-                      />
+                <div class="uk-card-body">
+                  <div class="uk-card-media-top">                                  
+                    <div class="uk-inline-clip uk-transition-toggle"
+                          tabindex="0">
+                      <GatsbyImage image={node.media[0].localFile.childImageSharp.gatsbyImageData} alt="/"/>
 
-                      {node.media[1] && (
-                        <GatsbyImage
-                          class="uk-transition-scale-up uk-position-cover"
-                          image={
-                            node.media[1].localFile.childImageSharp
-                              .gatsbyImageData
-                          }
-                          alt=""
-                        />
-                      )}
-                    </div>
-                  </div>
-                  <div class="uk-card-body">
+                      {node.media[1] && (<GatsbyImage class="uk-transition-scale-up uk-position-cover"
+                                    image={node.media[1].localFile.childImageSharp.gatsbyImageData} alt=""/>)}
+                      
+                      {node.media[2] && (<GatsbyImage class="uk-transition-scale-up uk-position-cover"
+                                      image={node.media[1].localFile.childImageSharp.gatsbyImageData} alt=""/>)}  
+                      </div> 
+                  </div>                 
                     <div>
                       <h4 class="uk-card-title uk-margin-small-bottom">
                         {node.title}
@@ -104,13 +90,17 @@ const IndexPage = ({data}) => {
                       <div>
                         {node.Type} {node.QuantityPerPackage}
                       </div>
-                      <div class="uk-padding-small"> {node.price}₽</div>
+                      <div class="uk-padding-small"> {node.price} ₽</div>
                     </div>
-                    <button class="uk-button uk-button-primary uk-border-rounded">
+                    </div>
+                    <div class="uk-card-footer">
+                    <button                      
+                      class="uk-button uk-button-primary uk-border-rounded">
                       Подробнее
                     </button>
-                  </div>
-                </div>
+                    </div>
+                  
+                </div>                
               </Link>
             ))}
           </div>
@@ -160,17 +150,14 @@ const IndexPage = ({data}) => {
               </div>
               <div>
                 <div class="uk-panel">
-                  <h4>Подробности о категории</h4>
+                  <h4>Гвозди для монтажных пистолетов FEDAST тип CN</h4>
                   <p>
-                    Разнообразный и богатый опыт говорит нам, что граница
-                    обучения кадров предоставляет широкие возможности для
-                    своевременного выполнения сверхзадачи! Значимость этих
-                    проблем настолько очевидна, что базовый вектор развития в
-                    значительной степени обусловливает важность кластеризации
-                    усилий. Картельные сговоры не допускают ситуации, при
-                    которой представители современных социальных резервов
-                    заблокированы в рамках своих собственных рациональных
-                    ограничений.
+                    Гвозди имеют пулевидную форму, имея большее уплотнение
+                    материала гвоздя в зоне его острия. Такая форма пригодна для
+                    более успешного вхождения в материалы повышенной плотности.
+                    Гвозди по бетону FEDAST совместимы с монтажными пистолетами
+                    производства HYBEST, SPIT Pulsa, Aiken, MAX, Ramset, Makita,
+                    HITACHI, Trusty, Toua, Bea и других производителей.
                   </p>
                 </div>
               </div>

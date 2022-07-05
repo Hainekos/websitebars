@@ -137,6 +137,7 @@ audio,
 canvas,
 iframe,
 img,
+image,
 svg,
 video {
   vertical-align: middle;
@@ -148,6 +149,7 @@ video {
  */
 canvas,
 img,
+image,
 svg,
 video {
   /* 1 */

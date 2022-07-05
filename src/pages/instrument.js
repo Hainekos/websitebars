@@ -44,17 +44,14 @@ const Instrument = ({data}) => {
           <div
             class="uk-child-width-1-2@s uk-child-width-1-4@m uk-grid-row-large uk-margin-large-top"
             data-uk-grid
-            data-uk-height-match="target: > a > .uk-card > .uk-card-body > div"
-          >
-            
+            data-uk-height-match="target: > a > .uk-card">
             {data.allStrapiProduct.edges.map(({ node }) => (
               <Link to={"/product/" + node.slug} class="uk-link-reset">
                 <div class="uk-card uk-card-default uk-border-rounded uk-box-shadow-small uk-text-center">
-                  <div class="uk-card-media-top">
-                                  
+                <div class="uk-card-body">
+                  <div class="uk-card-media-top">                                  
                     <div class="uk-inline-clip uk-transition-toggle"
                           tabindex="0">
-
                       <GatsbyImage image={node.media[0].localFile.childImageSharp.gatsbyImageData} alt="/"/>
 
                       {node.media[1] && (<GatsbyImage class="uk-transition-scale-up uk-position-cover"
@@ -63,8 +60,7 @@ const Instrument = ({data}) => {
                       {node.media[2] && (<GatsbyImage class="uk-transition-scale-up uk-position-cover"
                                       image={node.media[1].localFile.childImageSharp.gatsbyImageData} alt=""/>)}  
                       </div> 
-                  </div>
-                  <div class="uk-card-body">
+                  </div>                 
                     <div>
                       <h4 class="uk-card-title uk-margin-small-bottom">
                         {node.title}
@@ -72,24 +68,22 @@ const Instrument = ({data}) => {
                       <div>
                         {node.Type} {node.QuantityPerPackage}
                       </div>
-                      <div class="uk-padding-small"> {node.price}₽</div>
+                      <div class="uk-padding-small"> {node.price} ₽</div>
                     </div>
-                    <button
-                      
-                      class="uk-button uk-button-primary uk-border-rounded"
-                    >
+                    </div>
+                    <div class="uk-card-footer">
+                    <button                      
+                      class="uk-button uk-button-primary uk-border-rounded">
                       Подробнее
                     </button>
-                  </div>
+                    </div>
                   
-                  
-                </div>
-                
+                </div>                
               </Link>
             ))}
           </div>
         </div>
-      </section>  
+      </section>
 </Category>
   );
 };

@@ -34,7 +34,7 @@ const Header = () => {
     <header class="Header uk-container uk-container-expand uk-background-secondary">
         <nav class="uk-navbar-container uk-navbar-transparent uk-light" data-uk-navbar>
             <div class="uk-navbar-left">
-                <a class="uk-navbar-item uk-logo" href="https://webproviderngo.github.io/vapp.group/">БАРС</a>
+                <a class="uk-navbar-item uk-logo" href="/">БАРС</a>
                 {/* <Link to="/" class="uk-navbar-item uk-logo">БАРС</Link> */}
             </div>
             <div class="uk-navbar-right uk-visible@m">

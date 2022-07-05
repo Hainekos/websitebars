@@ -32,7 +32,7 @@ const ContactPage = () => {
                     </ul>
                 </div>
                 <div>
-                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A138af5ad1ded39185f902b41726e6db855620dc525880f4cdfd186f178fecb20&amp;width=793&amp;height=578&amp;lang=ru_RU&amp;scroll=true"></script>
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A138af5ad1ded39185f902b41726e6db855620dc525880f4cdfd186f178fecb20&amp;source=constructor" width="600" height="450" frameborder="0"></iframe>
                 </div>
             </div>
         </div>
